@@ -28,7 +28,7 @@ To get started with this project locally, follow these steps:
    ```bash
    git clone https://github.com/Mmagdy-github-profile/personal-website.git
 2. Navigate to the project directory:
-``$ cd [repository-name]``
+``$ cd personal-website``
 
 ## Author
 [Mostafa Magdy]("https//:https://github.com/Mmagdy-github-profile/personal-website")
