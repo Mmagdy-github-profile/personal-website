@@ -1,0 +1,45 @@
+.skills {
+  padding: 6rem 0;
+}
+@import "./mixing";
+.skills__list {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+
+  @include towCoulmns(
+    $grid-template-columns: repeat(3, 1fr),
+    $row-gap: 30px,
+    $column-gap: 70px
+  );
+}
+.skills_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  box-shadow: 12px 10px 0.5rem var(--box-shadow);
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+  width: 350px;
+}
+.skills__icon {
+  font-size: 40px;
+}
+.skills_items:hover {
+  text-shadow: 0 0 1px var(--color-text);
+  transform: scale(1.1);
+}
+.skills__title {
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.skills__years {
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 5px;
+}

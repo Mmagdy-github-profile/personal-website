@@ -1,0 +1,111 @@
+@import "./mixing";
+.bio {
+  @include towCoulmns(
+    $grid-template-columns: repeat(2, 1fr),
+    $column-gap: 7.4rem
+  );
+  align-items: flex-start;
+}
+.bio__date {
+  max-width: 500px;
+}
+.bio__heading {
+  font-size: 55px;
+  font-weight: bold;
+  position: relative;
+}
+.bio__heading::after {
+  content: "Mostaf Magdy 😊";
+  position: absolute;
+  color: var(--color-background);
+  width: 70px;
+  height: 70px;
+  font-size: 14px;
+  background-color: var(--color-text);
+  text-align: center;
+  top: -80px;
+  left: -3px;
+  border-radius: 0 0 0 35px;
+  box-shadow: 6px 10px 8px 1px rgba(0, 0, 0, 0.15);
+  font-family: var(--font-family-poppins);
+}
+.bio__broject {
+  font-family: var(--font-family-poppins);
+  margin: 3rem 0 5rem;
+  font-size: 20px;
+}
+.bio__user {
+  font-weight: bold;
+  font-size: 18px;
+}
+.bio__almdrasa {
+  color: var(--color-green);
+  text-decoration: underline;
+}
+.bio__facebook,
+.bio__twitter,
+.bio__linkedin {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+.bio__youtube {
+  color: var(--color-red);
+  text-decoration: underline;
+}
+.say-hi-link {
+  background-color: var(--color-link-bg);
+  color: var(--color-white);
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 18px 0 0 18px;
+}
+.find-out-link {
+  color: var(--color-text);
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-inline-start: 1.4rem;
+}
+@keyframes arrow {
+  0% {
+    transform: translateY(5px);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.bio__arrow {
+  display: inline-block;
+  margin-left: 5px;
+  animation: arrow 1s infinite alternate ease-in-out;
+}
+.bio__pic-content {
+  position: relative;
+  margin-right: 110px;
+  justify-self: end;
+}
+
+.bio__pic-content::before {
+  content: "";
+  position: absolute;
+  width: 267px;
+  height: 130px;
+  top: 61px;
+  left: 45px;
+  background-color: var(--color-box-img);
+  z-index: -1;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
+}
+.bio__pic {
+  max-width: 100%;
+}
